@@ -1,0 +1,28 @@
+:root {
+  --font-sans-serif: Poppins, sans-serif;
+  --font-serif: Brawler, serif;
+  --black: #000;
+  --gray-dark: #595959;
+  --yellow: #ffdb00;
+  --gray-light: #ebebeb;
+  --white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--gray-dark);
+  line-height: 1.667;
+}
+
+a {
+  color: var(--gray-dark);
+}
