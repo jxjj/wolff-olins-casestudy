@@ -7,8 +7,8 @@
 This is a project for the Web Development course at the Minneapolis College of Art and Deisgn. In this example, we dissect the excellent [Wolff Olins homepage](https://www.wolffolins.com/), and then develop a simple component library from our study.
 
 - [Initial Design Study](assets/wolff-olins-web-study.pdf)
-- [Component Library](components/index.html)
-- [Homepage Recreation](index.html)
+- [Component Library](https://jxjj.github.io/wolff-olins-casestudy/components/)
+- [Homepage Recreation](https://jxjj.github.io/wolff-olins-casestudy/)
 
 ## Author
 
