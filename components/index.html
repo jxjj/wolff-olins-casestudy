@@ -4,53 +4,498 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Components | Wolff Olins</title>
+    <title>Web Components | Wolff Olins Case Study</title>
     <link
       href="https://fonts.googleapis.com/css?family=Brawler|Poppins:400,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link href="../fonts/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
   </head>
-  <body>
-    <h1>Web Components</h1>
+  <body class="component-page">
+    <header class="component-page__header">
+      <div class="component-page__header-container">
+        <h1 class="wordmark">
+          <span class="wordmark__line">Wolff</span>
+          <span class="wordmark__line">Olins</span>
+        </h1>
+        <nav class="sidebar-nav component-page__nav">
+          <section class="sidebar-nav__section">
+            <h2 class="sidebar-nav__heading">
+              <a href="#typography">Typography</a>
+            </h2>
+            <ul class="sidebar-nav__list">
+              <li><a href="#typography">body</a></li>
+              <li><a href="#headings">h1, h2, h3, ...</a></li>
+              <li><a href="#links">a</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-nav__section">
+            <h2 class="sidebar-nav__heading"><a href="#atoms">Atoms</a></h2>
+            <ul class="sidebar-nav__list">
+              <li><a href="#wordmark">wordmark</a></li>
+              <li><a href="#nav-toggle">nav-toggle</a></li>
+              <li><a href="#section-heading">section-heading</a></li>
+              <li><a href="#action-link">action-link</a></li>
+              <li><a href="#icon--circle">icon--circle</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-nav__section">
+            <h2 class="sidebar-nav__heading">
+              <a href="#page-header">Page Header</a>
+            </h2>
+            <ul class="sidebar-nav__list">
+              <li><a href="#page-header">page-header</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-nav__section">
+            <h2 class="sidebar-nav__heading">
+              <a href="main-nav">Main Nav</a>
+            </h2>
+            <ul class="sidebar-nav__list">
+              <li><a href="#main-nav">main-nav</a></li>
+              <li><a href="#main-nav__list">main-nav__list</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-nav__section">
+            <h2 class="sidebar-nav__heading">
+              <a href="#cover-section">Cover Section</a>
+            </h2>
+            <ul class="sidebar-nav__list">
+              <li><a href="#cover-section">cover-section</a></li>
+              <li>
+                <a href="#cover-section__contents">cover-section__contents</a>
+              </li>
+              <li><a href="#cover-section--light">cover-section--light</a></li>
+              <li><a href="#cover-section--hero">cover-section--hero</a></li>
+            </ul>
+          </section>
+          <section class="sidebar-nav__section">
+            <h2 class="sidebar-nav__heading">
+              <a href="#page-footer">Page Footer</a>
+            </h2>
+            <ul class="sidebar-nav__list">
+              <li><a href="#page-footer">page-footer</a></li>
+              <li>
+                <a href="#social lists">social-list</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </header>
 
-    <h2>Typography Defaults</h2>
+    <main class="container component-page__main">
+      <h1>Web Design System</h1>
+      <p>
+        This is a collection of components based on my study of the design
+        system of the
+        <a href="https://wolffolins.com">Wolff Olins</a> website.
+      </p>
 
-    <article class="component">
-      <h3 class="component__name">body</h3>
-      <div class="component__img">
-        <img
-          srcset="img/body-copy-with-links@2x.png 2x"
-          src="img/body-copy-with-links@2x.png"
-          alt="body copy"
-        />
-      </div>
-      <div class="component__code">
-        <p>
-          The new brand was launched September 2018 alongside a new mission
-          statement and a renewed commitment to safety. We’re thrilled to share
-          that since our partnership, Uber’s brand went up 51% in value. In May
-          2019, it went public to be valued at more than $82 billion. For more
-          details on the brand launch, check out <a href="#!">Fast Company</a>,
-          <a href="#!">AdWeek</a> and
-          <a href="#!">Uber’s own case study</a> website. Thanks to our tireless
-          collaborators MCKL Type Foundry and the Uber Brand Experience Team.
-        </p>
-      </div>
-    </article>
+      <section class="page-section" id="typography">
+        <h2 class="component-page__section-heading">Typography</h2>
 
-    <article class="component">
-      <h3 class="component__name">headings (h1, h2, ...)</h3>
-      <div class="component__img">
-        <img srcset="img/h2@2x.png 2x" src="img/h2@2x.png" alt="h2" />
-        <img srcset="img/h3@2x.png 2x" src="img/h3@2x.png" alt="h3" />
-        <img srcset="img/h4@2x.png 2x" src="img/h4@2x.png" alt="h4" />
-      </div>
-      <div class="component__code">
-        <h2>Changing how the world moves</h2>
-        <h3>You might also like</h3>
-        <h4>The Met</h4>
-      </div>
-    </article>
+        <article id="body-copy" class="component component--is-done">
+          <h3 class="component__name">body</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/body-copy-with-links@2x.png 2x"
+              src="./img/body-copy-with-links@2x.png"
+              alt="Wordmark"
+            />
+          </div>
+          <div class="component__code">
+            <p>
+              The new brand was launched September 2018 alongside a new mission
+              statement and a renewed commitment to safety. We’re thrilled to
+              share that since our partnership, Uber’s brand went up 51% in
+              value. In May 2019, it went public to be valued at more than $82
+              billion. For more details on the brand launch, check out
+              <a href="#!">Fast Company</a>, <a href="#!">AdWeek</a> and
+              <a href="#!">Uber’s own case study</a> website. Thanks to our
+              tireless collaborators MCKL Type Foundry and the Uber Brand
+              Experience Team.
+            </p>
+          </div>
+        </article>
+
+        <article id="headings" class="component component--is-done">
+          <h3 class="component__name">h2, h3, h4</h3>
+          <div class="component__img">
+            <img srcset="./img/h2@2x.png 2x" src="./img/h2@2x.png" />
+            <img srcset="./img/h3@2x.png 2x" src="./img/h3@2x.png" />
+            <img srcset="./img/h4@2x.png 2x" src="./img/h4@2x.png" />
+          </div>
+          <div class="component__code">
+            <h2>Changing how the world moves</h2>
+            <h3>You might also like</h3>
+            <h4>The Met</h4>
+          </div>
+        </article>
+        <article id="links" class="component component--is-done">
+          <h3 class="component__name">Links</h3>
+          <div class="component__code">
+            <a href="#!">Uber's own case study</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Atoms -->
+      <section id="atoms" class="page-section">
+        <h2 class="component-page__section-heading">Atoms</h2>
+        <article id="wordmark" class="component component--is-done">
+          <h3 class="component__name">.wordmark</h3>
+          <img
+            class="component__img"
+            srcset="./img/wordmark@2x.png 2x"
+            src="./img/wordmark@2x.png"
+            alt="Wordmark"
+          />
+          <div class="component__code">
+            <h1 class="wordmark">
+              <span class="wordmark__line">Wolff</span>
+              <span class="wordmark__line">Olins</span>
+            </h1>
+          </div>
+        </article>
+
+        <article id="nav-toggle" class="component component--is-done">
+          <h3 class="component__name">.nav-toggle</h3>
+
+          <div class="component__img">
+            <img srcset="./img/navdot@2x.png 2x" src="./img/navdot@2x.png" />
+          </div>
+          <div class="component__code">
+            <a href="#!" class="nav-toggle">Menu</a>
+          </div>
+        </article>
+
+        <article id="section-heading" class="component component--is-done">
+          <h3 class="component__name">.section-heading</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/section-heading@2x.png 2x"
+              src="./img/section-heading@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <h2 class="section-heading">
+              We help create transformative brands that move businesses, people
+              and the world forward
+            </h2>
+          </div>
+        </article>
+
+        <article id="action-link" class="component component--is-done">
+          <h3 class="component__name">.action-link</h3>
+
+          <div class="component__img">
+            <img
+              srcset="./img/action-link@2x.png 2x"
+              src="./img/action-link@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <a href="#!" class="action-link">Play showreel</a>
+          </div>
+        </article>
+        <article id="icon--circle" class="component component--is-done">
+          <h3 class="component__name">.icon--circle</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/icon--circle@2x.png 2x"
+              src="./img/icon--circle@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <a href="#!" class="icon--circle"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </article>
+      </section>
+
+      <!-- page-header -->
+      <section class="page-section">
+        <h2 id="page-header" class="component-page__section-heading">
+          Page Header
+        </h2>
+        <article class="component component--is-done">
+          <h3 class="component__name">.page-header</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/page-header@2x.png 2x"
+              src="./img/page-header@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <header class="page-header">
+              <h1 class="wordmark">
+                <span class="wordmark__line">Wolff</span>
+                <span class="wordmark__line">Olins</span>
+              </h1>
+              <nav>
+                <a href="#!" class="nav-toggle">Menu</a>
+              </nav>
+            </header>
+          </div>
+        </article>
+      </section>
+
+      <section class="page-section">
+        <h2 id="main-nav" class="component-page__section-heading">Main Nav</h2>
+
+        <article class="component component--is-done">
+          <h3 class="component__name">.main-nav</h3>
+
+          <div class="component__img">
+            <img
+              srcset="./img/main-nav@2x.png 2x"
+              src="./img/main-nav@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <nav class="main-nav">
+              <h2 class="visually-hidden">Main Menu</h2>
+              <ul class="main-nav__list">
+                <li><a href="#!">Work</a></li>
+                <li><a href="#!">About</a></li>
+                <li><a href="#!">Inside</a></li>
+                <li><a href="#!">Views</a></li>
+                <li><a href="#!">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </article>
+
+        <article id="main-nav__list" class="component component--is-done">
+          <h3 class="component__name">.main-nav__list</h3>
+
+          <div class="component__img">
+            <img
+              srcset="./img/main-nav__list@2x.png 2x"
+              src="./img/main-nav__list@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <ul class="main-nav__list">
+              <li><a href="#!">Work</a></li>
+              <li><a href="#!">About</a></li>
+              <li><a href="#!">Inside</a></li>
+              <li><a href="#!">Views</a></li>
+              <li><a href="#!">Contact</a></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="page-section">
+        <h2 id="cover-section" class="component-page__section-heading">
+          Cover Section
+        </h2>
+
+        <article class="component component--is-done">
+          <h3 class="component__name">.cover-section</h3>
+          <!-- <div class="component__img">
+							<img
+								srcset="./img/cover-section@2x.png 2x"
+								src="./img/cover-section@2x.png"
+							/>
+						</div> -->
+          <div class="component__code">
+            <article class="cover-section">
+              <div class="cover-section__feature-media">
+                <img
+                  srcset="
+                    https://images.prismic.io/wolffolins/Yjg4NjQxMzMtNzY3ZS00MjU1LWJlZWMtMDlmMmFiNGQ0MDZk_sage_brain_zoom.gif?auto=compress,format&amp;rect=0,0,1600,900&amp;w=1365&amp;h=768  1365w,
+                    https://images.prismic.io/wolffolins/Yjg4NjQxMzMtNzY3ZS00MjU1LWJlZWMtMDlmMmFiNGQ0MDZk_sage_brain_zoom.gif?auto=compress,format                                             1600w,
+                    https://images.prismic.io/wolffolins/Yjg4NjQxMzMtNzY3ZS00MjU1LWJlZWMtMDlmMmFiNGQ0MDZk_sage_brain_zoom.gif?auto=compress,format&amp;rect=0,0,1600,900&amp;w=2560&amp;h=1440 2560w
+                  "
+                  loading="lazy"
+                  sizes="80vw"
+                  alt=""
+                />
+              </div>
+              <div class="cover-section__contents">
+                <a href="#!">
+                  <h2 class="section-heading">
+                    Sage Therapeutics
+                  </h2>
+                  <p>Pioneering a new way of approaching brain health</p>
+                  <span href="#!" class="action-link">
+                    <span class="visually-hidden">Read More</span>
+                  </span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article
+          id="cover-section__contents"
+          class="component component--is-done"
+        >
+          <h3 class="component__name">.cover-section__contents</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/cover-section__contents@2x.png 2x"
+              src="./img/cover-section__contents@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <div class="cover-section__contents">
+              <a href="#!">
+                <h2 class="section-heading">
+                  Google
+                </h2>
+                <p>Nine years of collaboration</p>
+                <span href="#!" class="action-link">
+                  <span class="visually-hidden">Read More</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article id="cover-section--light" class="component component--is-done">
+          <h3 class="component__name">.cover-section .cover-section--light</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/cover-section@2x.png 2x"
+              src="./img/cover-section@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <article class="cover-section cover-section--light">
+              <div class="cover-section__feature-media">
+                <video autoplay="true" loop>
+                  <source
+                    src="https://wolffolins.cdn.prismic.io/wolffolins%2F8ec5e816-c5c6-4cdb-8704-d06b98bcfd00_opt_mckinsey_lead.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="cover-section__contents">
+                <a href="#!">
+                  <h2 class="section-heading">
+                    McKinsey &amp; Company
+                  </h2>
+                  <p>Creating real change</p>
+                  <span href="#!" class="action-link">
+                    <span class="visually-hidden">Read More</span>
+                  </span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article id="cover-section--hero" class="component component--is-done">
+          <h3 class="component__name">.cover-section .cover-section--hero</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/cover-section--hero@2x.png 2x"
+              src="./img/cover-section--hero@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <article class="cover-section cover-section--hero">
+              <div class="cover-section__feature-media">
+                <p>
+                  We help create transformative brands that move businesses,
+                  people and the world forward
+                </p>
+              </div>
+              <div class="cover-section__contents">
+                <a href="#!" class="action-link">
+                  Play Showreel
+                </a>
+              </div>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <section class="page-section">
+        <h2 id="page-footer" class="component-page__section-heading">
+          Page Footer
+        </h2>
+        <article class="component component--is-done">
+          <h3 class="component__name">.page-footer</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/page-footer@2x.png 2x"
+              src="./img/page-footer@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <footer class="page-footer">
+              <h2 class="page-footer__heading">Wolff Olins</h2>
+              <div class="page-footer__links">
+                <p><a href="#!">Cookie Policy</a></p>
+                <p><a href="#!">Legal Information</a></p>
+                <ul class="social-list">
+                  <li>
+                    <a href="#!" class="icon--circle"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#!" class="icon--circle"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#!" class="icon--circle"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#!" class="icon--circle"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </article>
+        <article id="social-list" class="component component--is-done">
+          <h3 class="component__name">.social-list</h3>
+          <div class="component__img">
+            <img
+              srcset="./img/social-list@2x.png 2x"
+              src="./img/social-list@2x.png"
+            />
+          </div>
+          <div class="component__code">
+            <ul class="social-list">
+              <li>
+                <a href="#!" class="icon--circle"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#!" class="icon--circle"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#!" class="icon--circle"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#!" class="icon--circle"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

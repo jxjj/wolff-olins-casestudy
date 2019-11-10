@@ -1,11 +1,13 @@
 :root {
+  --black: #000;
+  --gray-dark: #545454;
+  --gray-light: #ebebeb;
+  --yellow: #ffdb00;
+  --yellow-light: #fffae3;
+  --green-light: #e6f7e7;
+  --white: #fff;
   --font-sans-serif: Poppins, sans-serif;
   --font-serif: Brawler, serif;
-  --black: #000;
-  --gray-dark: #595959;
-  --yellow: #ffdb00;
-  --gray-light: #ebebeb;
-  --white: #fff;
 }
 
 html {
@@ -17,25 +19,29 @@ html {
   box-sizing: inherit;
 }
 
-/**
-* Typography
-*/
 body {
   font-family: var(--font-serif);
+  font-weight: 400;
   color: var(--gray-dark);
-  line-height: 1.667;
+  line-height: 1.666;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: var(--font-sans-serif);
+  font-weight: 400;
   color: var(--black);
-  line-height: 1.2;
-  font-weight: 500;
+  line-height: 1.1;
 }
+
+h1 {
+  font-size: 3.5rem;
+}
+
 h2 {
   font-size: 2.333rem;
 }
@@ -50,21 +56,453 @@ a {
   color: var(--gray-dark);
 }
 
-img {
+img,
+video {
   max-width: 100%;
   display: block;
 }
 
-/**
-* .component
+/***
+* Utilities
 */
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+.container {
+  padding: 2rem;
+}
+
+/**
+* design system component on the components.html page
+**/
+.component {
+  margin-bottom: 6rem;
+  position: relative;
+}
+
 .component img {
   max-width: initial;
 }
 .component__img {
   border: 1px solid #ccc;
+  margin: 0;
   overflow-x: auto;
+  position: relative;
+}
+
+.component__name {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: normal;
+  background: var(--gray-light);
+  padding: 0.25rem;
+  margin: 0;
 }
 .component__code {
   border: 1px solid #ccc;
+  background: #fff;
+  margin: 0;
+  position: relative;
+}
+
+.component__code:before,
+.component__img:before {
+  content: "CODE";
+  display: block;
+  padding: 0.25rem;
+  line-height: 1;
+  font-family: monospace;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: var(--gray-light);
+  color: var(--gray-dark);
+}
+.component__img:before {
+  content: "IMG";
+}
+
+.sidebar-nav {
+  background: var(--gray-light);
+}
+.sidebar-nav__section {
+  margin-top: 2.5rem;
+}
+.sidebar-nav__heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.sidebar-nav__heading a {
+  text-decoration: none;
+  color: var(--black);
+}
+.sidebar-nav__list {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-nav__list a {
+  text-decoration: none;
+}
+
+/*************************
+* ATOMS
+**/
+
+/**
+* Wolff Olins Wordmark
+*/
+.wordmark {
+  margin: 0;
+  display: inline-flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  line-height: 0.85;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/**
+* toggle button for the main nav
+*/
+.nav-toggle {
+  display: block;
+  border: 1px solid var(--black);
+  overflow: hidden;
+  width: 2.666rem;
+  height: 2.666rem;
+  color: transparent;
+  background: var(--black);
+  border-radius: 50%;
+}
+
+/**
+* Section Heading
+*/
+.section-heading {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/**
+* Action Link
+**/
+.action-link {
+  --arrow-width: 3.25rem;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-sans-serif);
+  font-size: 1.25rem;
+  color: var(--black);
+  text-decoration: none;
+}
+.action-link:before {
+  content: "";
+  transform-origin: center left;
+  transition: all 0.3s;
+  display: block;
+  width: var(--arrow-width);
+  height: 1.5rem;
+  background: url("../img/arrow.svg") no-repeat left center;
+}
+
+/***********
+* MOLECULES & ORGANISMS
+* I find the distinction somewhat arbitrary and confusion, so basically
+* these are things made up of atoms
+*/
+
+/**
+* page header including wordmark and nav
+*/
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/**
+* .main-nav
+*/
+.main-nav {
+  background: var(--black);
+  color: var(--white);
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.main-nav__list {
+  font-family: var(--font-sans-serif);
+  line-height: 1.2;
+  padding: 0;
+  background: var(--black);
+  color: var(--white);
+  font-size: 10vmin;
+  margin: 0;
+  list-style-type: none;
+}
+.main-nav__list li {
+  margin: 0;
+}
+.main-nav__list a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/**
+* .cover-section
+*/
+.cover-section {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 2rem;
+}
+@media (min-width: 40rem) {
+  .cover-section {
+    height: 100vh;
+  }
+}
+
+.cover-section__feature-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cover-section__feature-media video,
+.cover-section__feature-media img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cover-section__contents {
+  z-index: 10;
+}
+.cover-section__contents a {
+  text-decoration: none;
+  color: var(--black);
+}
+.cover-section__contents > a > * {
+  margin: 1rem 0;
+}
+
+.cover-section__contents:hover .action-link:before {
+  transform: scaleX(1.5);
+  width: calc(var(--arrow-width) * 1.5);
+}
+
+.cover-section--light,
+.cover-section--light .section-heading,
+.cover-section--light .action-link,
+.cover-section--light a {
+  color: var(--white);
+}
+
+.cover-section--light .action-link:before {
+  background-image: url("../img/arrow--light.svg");
+}
+
+.cover-section--hero {
+  background: var(--yellow);
+  /* allow next cover to show a little, implying that
+	the user can scroll down */
+  height: calc(100vh - 3rem);
+}
+.cover-section--hero .cover-section__feature-media {
+  font-family: var(--font-sans-serif);
+  font-weight: 500;
+  font-size: 6vmin;
+  line-height: 1.2;
+  color: var(--black);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+* .page-footer
+*/
+.page-footer {
+  font-family: var(--font-sans-serif);
+  padding: 2rem;
+  line-height: 1.2;
+}
+.page-footer a {
+  color: var(--black);
+  text-decoration: none;
+}
+.page-footer .icon--circle {
+  color: var(--white);
+}
+.page-footer__heading {
+  margin: 0;
+  font-size: 1rem;
+}
+@media (min-width: 50rem) {
+  .page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-footer__links {
+    display: flex;
+    align-items: center;
+  }
+  .page-footer__links > * {
+    margin: 0 1rem 0 0;
+  }
+}
+
+/**
+* .social-list
+*/
+.social-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.social-list > * {
+  margin-right: 0.25rem;
+}
+.social-list > :last-child {
+  margin-right: 0;
+}
+
+/**
+* .social-list__item
+*/
+.icon--circle {
+  background: var(--black);
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+.icon--circle,
+.icon--circle a {
+  color: var(--white);
+  text-decoration: none;
+}
+.icon--circle:hover {
+  background: var(--yellow);
+}
+.icon--circle:hover,
+.icon--circle:hover a {
+  color: var(--black);
+}
+
+/*********************************
+* TEMPLATES
+**/
+
+.component-page {
+  display: block;
+  padding-top: 5rem;
+}
+.component-page__header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--gray-light);
+  z-index: 100;
+}
+.component-page__header-container {
+  position: static;
+  padding: 1rem 2rem;
+}
+.component-page__nav {
+  display: none;
+}
+.component-page__section-heading {
+  margin-bottom: 0;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: var(--black);
+  color: var(--white);
+  padding: 0.5rem;
+  position: sticky;
+  top: 4.5rem;
+  z-index: 10;
+}
+.component-page .component__name {
+  position: sticky;
+  top: 6.5rem;
+  z-index: 9;
+}
+
+@media (min-width: 45rem) {
+  .component-page {
+    display: grid;
+    /* why minmax(0, 1fr)?
+			 See: https://css-tricks.com/preventing-a-grid-blowout/ */
+    grid-template-columns: 18rem minmax(0, 1fr);
+    grid-template-areas: "header main";
+    padding-top: 0;
+  }
+  .component-page__header {
+    position: relative;
+    padding: 1rem;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 18rem;
+  }
+  .component-page__header-container {
+    padding: 1rem;
+  }
+
+  .component-page__nav {
+    display: block;
+    grid-area: nav;
+    margin-top: 1.33rem;
+  }
+  .component-page__main {
+    grid-area: main;
+  }
+  .component-page__section-heading {
+    top: 0;
+  }
+  .component-page .component__name {
+    top: 2rem;
+  }
+}
+
+.home-page {
+  display: grid;
+}
+.home-page__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.home-page__main {
+  scroll-snap-type: y mandatory;
+}
+.home-page__main > * {
+  scroll-snap-align: start;
 }

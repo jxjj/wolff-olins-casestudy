@@ -4,9 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home | Wolff Olins</title>
+    <title>Wolff Olins | Design Study Project</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Brawler|Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./fonts/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
-  <body>
-    <h1>Home Page Goes Here Eventually</h1>
+  <body class="home-page">
+    <header class="page-header home-page__header">
+      <h1 class="wordmark">
+        <span class="wordmark__line">Wolff</span>
+        <span class="wordmark__line">Olins</span>
+      </h1>
+      <nav>
+        <a href="#!" class="nav-toggle">Menu</a>
+      </nav>
+    </header>
+    <main class="home-page__main">
+      <article class="cover-section cover-section--hero">
+        <div class="cover-section__feature-media">
+          <p>
+            We help create transformative brands that move businesses, people
+            and the world forward
+          </p>
+        </div>
+        <div class="cover-section__contents">
+          <a href="#!" class="action-link">
+            Play Showreel
+          </a>
+        </div>
+      </article>
+      <article class="cover-section">
+        <div class="cover-section__feature-media">
+          <video
+            autoplay
+            loop
+            playsinline
+            muted
+            src="https://wolffolins.cdn.prismic.io/wolffolins/1f973f58-d3d0-4d4a-aa56-a49b17ce1e7b_Vonage_00_Hero.mp4"
+            type="video/mp4"
+          ></video>
+        </div>
+        <div class="cover-section__contents">
+          <a href="#!">
+            <h2 class="section-heading">
+              Vonage
+            </h2>
+            <p>Communicating in a new age of connectivity</p>
+            <span href="#!" class="action-link">
+              <span class="visually-hidden">Read More</span>
+            </span>
+          </a>
+        </div>
+      </article>
+      <article class="cover-section cover-section--light">
+        <div class="cover-section__feature-media">
+          <video
+            autoplay
+            loop
+            playsinline
+            muted
+            src="https://wolffolins.cdn.prismic.io/wolffolins%2Fcc4ea2db-0fa1-4693-8b48-ff72a15461b5_opt_casestudy_uber_lead.mp4"
+            type="video/mp4"
+          ></video>
+        </div>
+        <div class="cover-section__contents">
+          <a href="#!">
+            <h2 class="section-heading">
+              Uber
+            </h2>
+            <p>Changing how the world moves</p>
+            <span href="#!" class="action-link">
+              <span class="visually-hidden">Read More</span>
+            </span>
+          </a>
+        </div>
+      </article>
+      <article class="cover-section cover-section--light">
+        <div class="cover-section__feature-media">
+          <video
+            autoplay
+            loop
+            playsinline
+            muted
+            src="https://wolffolins.cdn.prismic.io/wolffolins%2F8ec5e816-c5c6-4cdb-8704-d06b98bcfd00_opt_mckinsey_lead.mp4"
+            type="video/mp4"
+          ></video>
+        </div>
+        <div class="cover-section__contents">
+          <a href="#!">
+            <h2 class="section-heading">
+              McKinsey &amp; Company
+            </h2>
+            <p>Creating real change</p>
+            <span href="#!" class="action-link">
+              <span class="visually-hidden">Read More</span>
+            </span>
+          </a>
+        </div>
+      </article>
+      <article class="cover-section">
+        <div class="cover-section__feature-media">
+          <img
+            srcset="
+              https://images.prismic.io/wolffolins/Yjg4NjQxMzMtNzY3ZS00MjU1LWJlZWMtMDlmMmFiNGQ0MDZk_sage_brain_zoom.gif?auto=compress,format&amp;rect=0,0,1600,900&amp;w=1365&amp;h=768  1365w,
+              https://images.prismic.io/wolffolins/Yjg4NjQxMzMtNzY3ZS00MjU1LWJlZWMtMDlmMmFiNGQ0MDZk_sage_brain_zoom.gif?auto=compress,format                                             1600w,
+              https://images.prismic.io/wolffolins/Yjg4NjQxMzMtNzY3ZS00MjU1LWJlZWMtMDlmMmFiNGQ0MDZk_sage_brain_zoom.gif?auto=compress,format&amp;rect=0,0,1600,900&amp;w=2560&amp;h=1440 2560w
+            "
+            loading="lazy"
+            sizes="80vw"
+            alt=""
+          />
+        </div>
+        <div class="cover-section__contents">
+          <a href="#!">
+            <h2 class="section-heading">
+              Sage Therapeutics
+            </h2>
+            <p>Pioneering a new way of approaching brain health</p>
+            <span href="#!" class="action-link">
+              <span class="visually-hidden">Read More</span>
+            </span>
+          </a>
+        </div>
+      </article>
+    </main>
+    <footer class="page-footer">
+      <h2 class="page-footer__heading">Wolff Olins</h2>
+      <div class="page-footer__links">
+        <p><a href="#!">Cookie Policy</a></p>
+        <p><a href="#!">Legal Information</a></p>
+        <ul class="social-list">
+          <li>
+            <a href="#!" class="icon--circle"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#!" class="icon--circle"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#!" class="icon--circle"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#!" class="icon--circle"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
