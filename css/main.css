@@ -489,20 +489,3 @@ video {
     top: 2rem;
   }
 }
-
-.home-page {
-  display: grid;
-}
-.home-page__header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-}
-.home-page__main {
-  scroll-snap-type: y mandatory;
-}
-.home-page__main > * {
-  scroll-snap-align: start;
-}
